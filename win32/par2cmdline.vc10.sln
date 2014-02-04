@@ -1,0 +1,32 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "par2cmdline", "par2cmdline.vc10.vcxproj", "{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "par2_win64", "..\par2_win64\par2_win64.vcxproj", "{9833ED5E-9E60-4109-862D-93589AC9BA0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugCUDA|Win32 = DebugCUDA|Win32
+		Release|Win32 = Release|Win32
+		ReleaseCUDA|Win32 = ReleaseCUDA|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.Debug|Win32.Build.0 = Debug|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.DebugCUDA|Win32.ActiveCfg = DebugCUDA|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.DebugCUDA|Win32.Build.0 = DebugCUDA|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.Release|Win32.ActiveCfg = Release|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.Release|Win32.Build.0 = Release|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.ReleaseCUDA|Win32.ActiveCfg = ReleaseCUDA|Win32
+		{D0A94F83-495E-4FB2-AC33-9A3EC2CC263B}.ReleaseCUDA|Win32.Build.0 = ReleaseCUDA|Win32
+		{9833ED5E-9E60-4109-862D-93589AC9BA0F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9833ED5E-9E60-4109-862D-93589AC9BA0F}.DebugCUDA|Win32.ActiveCfg = Debug|Win32
+		{9833ED5E-9E60-4109-862D-93589AC9BA0F}.Release|Win32.ActiveCfg = Release|Win32
+		{9833ED5E-9E60-4109-862D-93589AC9BA0F}.ReleaseCUDA|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
