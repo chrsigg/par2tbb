@@ -115,8 +115,8 @@ LDADD = -lstdc++ -ltbb -L.
 if PLATFORM_DARWIN
 AM_CXXFLAGS = -Wall -I$(top_srcdir)/../tbb22_20090809oss_src/include -gfull -O3 -fvisibility=hidden -fvisibility-inlines-hidden $(CXXFLAGS_DARWIN) $(AM_CXXFLAGS_GPGPU) $(FLAGS_ARCH)
 if AMD64
-AM_CXXFLAGS += -mmacosx-version-min=10.5 -isysroot /Developer/SDKs/MacOSX10.5.sdk
-AM_LDFLAGS = -mmacosx-version-min=10.5
+# AM_CXXFLAGS += -mmacosx-version-min=10.5 -isysroot /Developer/SDKs/MacOSX10.5.sdk
+AM_LDFLAGS = # -mmacosx-version-min=10.5
 endif
 if X86CPU
 if GPGPU_CUDA    # CUDA mandates 10.5 so the two are mutally exclusive: either CUDA or 10.4u support but not both
