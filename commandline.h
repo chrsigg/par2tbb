@@ -122,6 +122,7 @@ public:
 
 #if WANT_CONCURRENT
   unsigned               GetConcurrentProcessingLevel(void) const { return concurrent_processing_level; }
+  u32                    GetNumThreads(void) const         {return numthreads;}
 #endif
 
   bool                   GetCreateDummyParFiles(void) const { return create_dummy_par_files; }
@@ -185,6 +186,8 @@ protected:
   // use, that functionality is not implemented (and the TBB documentation
   // recommends not using it in production code), so this is merely a bool:
   unsigned concurrent_processing_level; // whether to process serially or concurrently
+    
+  u32 numthreads;              // number of threads for parallel processing
 #endif
   bool create_dummy_par_files; // so that final par2 size can be determined
 };

@@ -413,6 +413,7 @@ CommandLine::CommandLine(void)
 , memorylimit(0)
 #if WANT_CONCURRENT
 , concurrent_processing_level(ALL_CONCURRENT) // whether to process everything serially or concurrently
+, numthreads(0)
 #endif
 , create_dummy_par_files(false)
 {
@@ -455,6 +456,7 @@ void CommandLine::usage(void)
 	"     -t+ to checksum and create/repair concurrently - uses multiple threads - good for hard disk files - [default]\n"
 	"     -t0 to checksum serially but create/repair concurrently - good for slow media such as CDs/DVDs\n"
 	"     -t- to checksum/create/repair serially - uses a single thread - good for testing this program\n"
+    "  -p<n>  : Set the number of threads for parallel processing\n"
 #endif
     // 2007/10/21
     "  -d<dir>: root directory for paths to be put in par2 files OR root directory for files to repair from par2 files\n"
@@ -920,6 +922,22 @@ bool CommandLine::Parse(int argc, TCHAR *argv[])
             }
           }
           break;
+                
+         case 'p':  // Set the number of threads
+            {
+                TCHAR *p = &argv[0][2];
+                while (numthreads <= 3276 && *p && isdigit(*p))
+                {
+                    numthreads = numthreads * 10 + (*p - '0');
+                    p++;
+                }
+                if (numthreads > 32768 || *p)
+                {
+                    cerr << "Invalid number of threads option: " << argv[0] << endl;
+                    return false;
+                }
+            }
+            break;
 #endif
 
         case '0':

@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 #endif
 {
 #if WANT_CONCURRENT
-  tbb::task_scheduler_init init;
+    tbb::task_scheduler_init init(tbb::task_scheduler_init::deferred);
 #endif
 
 #ifdef _MSC_VER
@@ -98,6 +98,17 @@ int main(int argc, char *argv[])
   {
     if (commandline->GetNoiseLevel() > CommandLine::nlSilent)
       banner();
+      
+#if WANT_CONCURRENT
+    int p = commandline->GetNumThreads();
+    if (p > 0)
+    {
+      cout << "Number of threads: " << p << endl;
+      init.initialize(p);
+    }
+    else
+      init.initialize();
+#endif
 
     // Which operation was selected
     switch (commandline->GetOperation())
