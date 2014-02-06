@@ -4,7 +4,7 @@ par2tbb
 [`par2`](http://parchive.sourceforge.net) creates redundancy to verify
 and repair errors in
 files. "[par2tbb](http://chuchusoft.com/par2_tbb/)" uses the Intel
-[Threaded Building Blocks](https://www.threadingbuildingblocks.org/)
+[Threading Building Blocks](https://www.threadingbuildingblocks.org/)
 library to parallelize this computation.
 
 The TBB documentation
