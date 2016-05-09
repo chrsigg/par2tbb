@@ -30,6 +30,7 @@
 //  par2cmdline-0.4-tbb is available at http://chuchusoft.com/par2_tbb
 
 #include "par2cmdline.h"
+#include <backward/auto_ptr.h>
 
 #if WANT_CONCURRENT
   #if CONCURRENT_PIPELINE

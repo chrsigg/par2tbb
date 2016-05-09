@@ -24,6 +24,7 @@
 //  Copyright (c) 2007 Intel Corp.
 
 #include "par2cmdline.h"
+#include <backward/auto_ptr.h>
 
 #ifdef _MSC_VER
 #ifdef _DEBUG
