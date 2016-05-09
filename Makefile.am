@@ -111,7 +111,7 @@ par2_SOURCES = par2cmdline.cpp par2cmdline.h \
 	verificationpacket.cpp verificationpacket.h \
 	$(ASMSOURCES) $(GPGPU_SOURCES)
 
-LDADD = -lstdc++ -ltbb -L.
+LDADD = -lstdc++ -ltbb -lrt -L.
 if PLATFORM_DARWIN
 AM_CXXFLAGS = -Wall -I$(top_srcdir)/../tbb22_20090809oss_src/include -gfull -O3 -fvisibility=hidden -fvisibility-inlines-hidden $(CXXFLAGS_DARWIN) $(AM_CXXFLAGS_GPGPU) $(FLAGS_ARCH)
 if AMD64
